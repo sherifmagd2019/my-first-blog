@@ -1,0 +1,12 @@
+<p>You searched for: <strong>{{ query }}</strong></p>
+{% if posts %}
+<p>Found {{ posts|length }} book{{ posts|pluralize }}.</p>
+<ul>
+{% for post  in posts %}
+<li>{{ post.title }}</li>
+<a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>
+{% endfor %}
+</ul>
+{% else %}
+<p>No books matched your search criteria.</p>
+{% endif %}

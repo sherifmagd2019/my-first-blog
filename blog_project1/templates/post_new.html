@@ -1,0 +1,21 @@
+<!-- templates/post_new.html -->
+<p>{% extends 'base.html' %} {% load i18n %}</p>
+<p>{% block content %}</p>
+<hr />
+
+<style>
+div {
+    direction:rtl;
+    unicode-bidi:bidi-override;
+}
+</style>
+
+<p style="text-align: right;"><span style="background-color: #ffffff; color: #333333;">مخاطبة جديدة</span></p>
+<p>&nbsp;</p>
+<form action="" method="post">
+<p style="text-align: right;">{% csrf_token %}</p>
+<p style="text-align: right;">  <p class="rtl">   {{ form.as_p }}</p> 
+<hr />
+<p style="text-align: right;"><span style="color: #000080;"><input type="submit" value="Save" /></span></p>
+</form>
+<p style="text-align: right;">{% endblock %}</p>

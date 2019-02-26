@@ -1,0 +1,66 @@
+
+{% load static %}
+{% load i18n %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+
+{{ user.groups.all.0 }}
+
+<p style="text-align: left;">{% load staticfiles %}</p>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a> |
+  <a href="{% url 'signup' %}">signup</a>
+{% endif %}
+ 
+
+<p>&nbsp;</p>
+<div class="container" style="text-align: right;"><header>
+<div class="nav-left">
+<h1 style="text-align: right;">&nbsp;</h1>
+</div>
+<div class="nav-right" style="text-align: right;">&nbsp;</div>
+</header></div>
+<div class="container" style="text-align: right;">&nbsp;</div>
+<div class="container" style="text-align: right;">
+<table style="height: 106px;" width="615">
+<tbody>
+<tr>
+<td style="width: 146px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px;">
+<h4 style="text-align: right;"><strong><a href="/">ميكنة الارشيف</a></strong></h4>
+</td>
+</tr>
+<tr>
+<td style="width: 146px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px; text-align: right;"><a href="{% url 'post_new' %}">مخاطبات جديدة</a></td>
+<td style="width: 147px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 146px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px;"> <p dir=”rtl” class=”rtl-text”>  {% block content %} {% endblock content %} </p>  </td>
+<td style="width: 147px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 146px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 146px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+<td style="width: 147px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="container" style="text-align: right;">&nbsp;</div>
+<div class="container" style="text-align: right;">&nbsp;</div>

@@ -1,0 +1,25 @@
+div {
+    direction:rtl;
+    unicode-bidi:bidi-override;
+}
+
+p.rtl {
+  direction: rtl;
+}
+
+
+ 
+
+[dir='ltr'], [dir='rtl'] { 
+    unicode-bidi: -webkit-isolate;
+    unicode-bidi: -moz-isolate;
+    unicode-bidi: -ms-isolate;
+    unicode-bidi: isolate;
+    } 
+bdo[dir='ltr'], bdo[dir='rtl'] {
+    unicode-bidi: bidi-override; 
+    unicode-bidi: -webkit-isolate-override; 
+    unicode-bidi: -moz-isolate-override; 
+    unicode-bidi: -ms-isolate-override; 
+    unicode-bidi: isolate-override;
+    }

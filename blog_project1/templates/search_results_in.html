@@ -1,0 +1,13 @@
+<p style="text-align: right;"><strong>{{ query }}&nbsp;: &nbsp;عدد المخاطبات الواردة&nbsp;</strong></p>
+<p style="text-align: right;">{% if posts %}</p>
+<p style="text-align: right;">تم ايجاد{{ posts|length }} مخاطبة{{ posts|pluralize }}.</p>
+<ul style="text-align: right;">
+<ul>{% for post in posts %}
+<li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #008000;"><strong><a style="color: #008000;" href="{% url 'post_edit' post.pk %}">استلام</a></strong></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{ post.title }}</li>
+</ul>
+</ul>
+<p style="text-align: right;">&nbsp;</p>
+<ul style="text-align: right;">{% endfor %}</ul>
+<p style="text-align: right;">{% else %}</p>
+<p style="text-align: right;">No books matched your search criteria.</p>
+<p style="text-align: right;">{% endif %}</p>
